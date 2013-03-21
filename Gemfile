@@ -1,9 +1,10 @@
-#cambiar en un futuro por http://gems.despegar.it/
-source 'https://rubygems.org'
+source :rubygems
 
 gem 'sinatra'
 gem 'thin'
 gem 'haml'
-gem 'data_mapper'
-gem 'dm-sqlite-adapter'
 
+group :test do
+  gem 'rspec', :require => 'spec'
+  gem 'rack-test'
+end

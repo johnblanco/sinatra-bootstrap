@@ -1,4 +1,4 @@
-#configuracion para thin server / sinatra
+#thin server config
 
 # config.ru
 $: << File.expand_path(File.dirname(__FILE__))

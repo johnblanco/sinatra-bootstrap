@@ -1,5 +1,4 @@
 class Category
-  include DataMapper::Resource
-  property :id,         Serial
-  property :name,       String
+  attr_accessor :id
+  attr_accessor :name
 end
