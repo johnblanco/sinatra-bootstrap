@@ -1,0 +1,23 @@
+!!! 5
+%html{:lang=> "en"}
+  %head
+    %meta{:charset=>"utf-8"}
+    %title sinatra bootstrap
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %meta{:name => "description", :content => ""}
+    %meta{:name => "author", :content => ""}
+    %link{:href => "/css/bootstrap.min.css", :rel => "stylesheet"}
+    %link{:href => "/css/style.css", :rel => "stylesheet"}
+    %link{:href => "/img/favicon.png", :rel => "shortcut icon"}
+
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a{:class=>"brand", :href=>"/"}
+            %img.logo{:src =>"/img/strawberry_ice_cream.png"}
+            Ice Scream LTD
+    = yield
+
+    %script{:type=>"text/javascript",:src=>"/js/jquery-1.9.1.min.js"}
+    %script{:type=>"text/javascript",:src=>"/js/bootstrap.min.js"}
