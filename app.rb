@@ -10,6 +10,14 @@ configure do
   set :admin_user => yml_config["admin"]["user"], :admin_password => yml_config["admin"]["password"]
 
   DataMapper.setup(:default, 'sqlite:///sqlite_database.db')
+  DataMapper.finalize
+
+
+
+  require  'dm-migrations'
+  DataMapper.auto_migrate!
+
+  #http://datamapper.org/getting-started.html
 
 
 end
