@@ -7,8 +7,12 @@ configure do
 
   yml_config = YAML.load_file("config.yml")
   set :admin_user => yml_config["admin"]["user"], :admin_password => yml_config["admin"]["password"]
-  set :root_url => ""
+  set :root_url => "/fenix-front-ruby"
 
+end
+
+before do
+  request.path_info = "/" if request.path_info == "/fenix-front-ruby"
 end
 
 helpers do
