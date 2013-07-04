@@ -15,7 +15,7 @@ helpers do
 end
 
 not_found do
-  'This is nowhere to be found.'
+  "404 #{request.path_info}"
 end
 
 error do
