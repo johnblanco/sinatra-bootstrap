@@ -7,6 +7,7 @@ configure do
 
   yml_config = YAML.load_file("config.yml")
   set :admin_user => yml_config["admin"]["user"], :admin_password => yml_config["admin"]["password"]
+  set :root_url => ""
 
 end
 
@@ -25,7 +26,5 @@ end
 #routes...
 
 get '/' do
-
   haml :index,:layout => :base_layout, :locals=>{:foo => "bar"}
-
 end
